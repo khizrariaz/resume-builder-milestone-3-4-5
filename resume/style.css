@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  background-color: antiquewhite;
+}
+/* flex ki in 3 prop c resume center c bnyga */
+.resumeDiv {
+  width: 70%;
+  border: 2px solid black;
+}
+header {
+  width: 100%;
+  height: 160px;
+  background-color: rgba(235, 135, 173, 0.733);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  margin-bottom: 30px;
+
+  /* padding= div or usku inner content k mod me gap */
+}
+/* display flex= upper neechy wali cheezo lo aik e line me arrange krta h */
+/* justify-content: space-between= space between. pic aik side p or div dusry side p chala jayga or space ajayga */
+
+header img {
+  width: 150px;
+  height: 160px;
+  border-radius: 50%;
+}
+/* content is a div in which aside div n main is presnt */
+.content {
+  width: 100%;
+  display: flex;
+}
+/* display: flex;= experience bottom c side p agai */
+.content aside {
+  width: 30%;
+  padding-left: 50px;
+  padding-bottom: 50px;
+  background-color: rgba(226, 180, 180, 0.11);
+  margin-bottom: 50px;
+}
+/* aside  color lenth correct */
+.contact,
+.education,
+.language {
+  margin-bottom: 30px;
+}
+
+.contact h2,
+.education h2,
+.skill h2,
+.language h2,
+.experience h2,
+.reference h2 {
+  border-bottom: 2px solid rgba(240, 5, 95, 0.733);
+  margin-bottom: 20px;
+  padding-bottom: 3px;
+  color: rgba(240, 5, 95, 0.733);
+}
+.education {
+  line-height: 20px;
+}
+.skill ul {
+  margin-left: 18px;
+}
+.main-content {
+  width: 70%;
+  padding-left: 50px;
+}
+
+.experience-items {
+  margin-bottom: 45px;
+}
+.experience-items p {
+  margin-bottom: 5px;
+}
+.experience-items ul {
+  margin-left: 18px;
+  margin-top: 15px;
+}
+.btnDiv {
+  width: 70%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+}
+.btn {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px 20px;
+  /* padding 10px up down, 20px right left */
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: palevioletred;
+
+  &:hover {
+    background-color: brown;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+  /* transform = btn will shrink on click */
+}
+
+.hide{
+  display: none;
+}
+/* hide is use to toggle in ts */
+
+/* btn small on click */
+
+/* @media (max-width: 786px) {
+  .content{
+    flex-direction: column;
+  }
+  aside, .main-content{
+    width: 100%;
+  }
+} */
+
+@media print{
+  .btnDiv{
+    display: none;
+  }
+}
+/* during print butns will not appear on ppr */
